@@ -40,7 +40,7 @@ export default function Footer() {
           <ul className="mt-3 space-y-2 opacity-90">
             <li>Badda, Dhaka 1212</li>
             <li>hello@hateyhat.org</li>
-            <li>+880 1700-000000</li>
+            <li>+880 1798982696</li>
           </ul>
         </div>
       </div>
