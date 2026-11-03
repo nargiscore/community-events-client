@@ -1,7 +1,7 @@
 # Hatey Hat: Community Service Events Platform
 
-**Live site:** https://hatey-hat.vercel.app  *(replace with your deployed URL)*
-**Server repo:** https://github.com/your-username/community-events-server
+**Live site:** https://hatey-hat-delta.vercel.app
+**Server repo:** https://github.com/nargiscore/community-events-server
 
 Hatey Hat lets neighbours create, join and track social service events such as winter clothes
 distribution in Mirpur 10 or blanket drives in Mohammadpur.
