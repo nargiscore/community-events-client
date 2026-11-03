@@ -1,11 +1,24 @@
+"use client";
 import Link from "next/link";
 import { formatDate } from "@/lib/api";
+
+const FALLBACK =
+  "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=70";
 
 export default function EventCard({ event }) {
   return (
     <article className="card h-full border border-base-300 bg-base-100 transition-shadow hover:shadow-lg">
       <figure className="h-48 w-full overflow-hidden">
-        <img src={event.thumbnail} alt={event.title} className="h-full w-full object-cover" loading="lazy" />
+        <img
+          src={event.thumbnail}
+          alt={event.title}
+          className="h-full w-full object-cover"
+          loading="lazy"
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = FALLBACK;
+          }}
+        />
       </figure>
       <div className="card-body gap-2">
         <span className="badge badge-secondary badge-soft w-fit">{event.eventType}</span>
