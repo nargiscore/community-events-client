@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@plugin "daisyui" { themes: false; }
+
+@plugin "daisyui/theme" {
+  name: "csp-light";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #ffffff;
+  --color-base-200: #eef4f1;
+  --color-base-300: #d5e2dc;
+  --color-base-content: #17302a;
+  --color-primary: #0b6b4f;
+  --color-primary-content: #ffffff;
+  --color-secondary: #e8590c;
+  --color-secondary-content: #ffffff;
+  --color-accent: #f2b705;
+  --color-accent-content: #1b1400;
+  --color-neutral: #123d33;
+  --color-neutral-content: #e6f2ee;
+  --color-info: #2b7de9;
+  --color-success: #1f9d55;
+  --color-warning: #f2b705;
+  --color-error: #d64545;
+  --radius-box: 0.75rem;
+  --radius-field: 0.5rem;
+  --radius-selector: 0.5rem;
+}
+
+@plugin "daisyui/theme" {
+  name: "csp-dark";
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: #0f1b18;
+  --color-base-200: #0a1311;
+  --color-base-300: #1e302b;
+  --color-base-content: #dcebe5;
+  --color-primary: #3ecf9a;
+  --color-primary-content: #052019;
+  --color-secondary: #ff8a4c;
+  --color-secondary-content: #1d0b00;
+  --color-accent: #f2b705;
+  --color-accent-content: #1b1400;
+  --color-neutral: #1e302b;
+  --color-neutral-content: #dcebe5;
+  --color-info: #5aa2ff;
+  --color-success: #3ecf9a;
+  --color-warning: #f2b705;
+  --color-error: #ff6b6b;
+  --radius-box: 0.75rem;
+  --radius-field: 0.5rem;
+  --radius-selector: 0.5rem;
+}
+
+:root {
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-body: var(--font-hind), system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-base-100);
+  color: var(--color-base-content);
+}
+
+h1, h2, h3, .brand { font-family: var(--font-display); }
+
+/* Consistent section heading + paragraph style across the whole site */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-base-content);
+}
+.section-sub {
+  max-width: 60ch;
+  margin-top: 0.75rem;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+.section { padding-block: clamp(3.5rem, 7vw, 6rem); }
+
+/* Hero uses a flat-printed look: a woven-stripe ground like a gamchha cloth */
+.gamchha {
+  background-color: var(--color-primary);
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 28px, rgba(255,255,255,.07) 28px 32px),
+    repeating-linear-gradient(0deg, transparent 0 28px, rgba(255,255,255,.07) 28px 32px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
